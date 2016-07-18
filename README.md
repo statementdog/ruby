@@ -1,10 +1,8 @@
 # Ruby Style Guide
 
-This is Airbnb's Ruby Style Guide.
+This is Statementdog's Ruby Style Guide.
 
-It was inspired by [Github's guide](https://web.archive.org/web/20160410033955/https://github.com/styleguide/ruby) and [Bozhidar Batsov's guide][bbatsov-ruby].
-
-Airbnb also maintains a [JavaScript Style Guide][airbnb-javascript].
+It was inspired by [Airbnb's guide](https://github.com/airbnb/ruby) and [Bozhidar Batsov's guide][bbatsov-ruby].
 
 ## Table of Contents
   1. [Whitespace](#whitespace)
@@ -1521,17 +1519,18 @@ In either case:
 
 * <a name="next-line-return"></a>When immediately returning after calling
     `render` or `redirect_to`, put `return` on the next line, not the same line.
+    If there is no any condition on the same line, put return at the end of line is acceptable.
     <sup>[[link](#next-line-return)]</sup>
 
     ```ruby
-    # bad
+    # acceptable
     render :text => 'Howdy' and return
 
-    # good
+    # better
     render :text => 'Howdy'
     return
 
-    # still bad
+    # bad
     render :text => 'Howdy' and return if foo.present?
 
     # good
