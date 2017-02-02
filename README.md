@@ -65,6 +65,34 @@ It was inspired by [Airbnb's guide](https://github.com/airbnb/ruby) and [Bozhida
            when 1940..1950 then 'Bebop'
            else 'Jazz'
            end
+
+    # bit more width efficient
+    kind =
+      case year
+      when 1850..1889 then 'Blues'
+      when 1890..1909 then 'Ragtime'
+      when 1910..1929 then 'New Orleans Jazz'
+      when 1930..1939 then 'Swing'
+      when 1940..1950 then 'Bebop'
+      else 'Jazz'
+      end
+    ```
+
+* <a name="consistent-multi-line-chains"></a>
+    Adopt a consistent multi-line method chaining style.
+    leading is considered good.
+<sup>[[link](#consistent-multi-line-chains)]</sup>
+
+    ```Ruby
+    # bad - need to consult first line to understand second line
+    one.two.three.
+      four
+
+    # good - it's immediately clear what's going on the second line
+    one
+      .two
+      .three
+      .four
     ```
 
 * <a name="align-function-params"></a>Align function parameters either all on
